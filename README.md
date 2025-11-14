@@ -1,19 +1,32 @@
-# 💬 Chatbot template
+# UbiMinds AI Adoption Challenge — Chatbot
 
-A simple Streamlit app that shows how to build a chatbot using OpenAI's GPT-3.5.
+This repository contains a Streamlit-based assessment chatbot used in the UbiMinds AI Adoption Challenge.
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://chatbot-template.streamlit.app/)
+Quick start (local)
+1. Create and activate a Python environment (recommended):
 
-### How to run it on your own machine
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
 
-1. Install the requirements
+2. Run the app:
 
-   ```
-   $ pip install -r requirements.txt
-   ```
+```bash
+streamlit run streamlit_app.py
+```
 
-2. Run the app
+3. Open the URL printed by Streamlit (typically `http://localhost:8501`).
 
-   ```
-   $ streamlit run streamlit_app.py
-   ```
+Deploy to Streamlit Community Cloud
+1. Push this repo to GitHub (this repo already includes a remote named `origin`).
+2. Go to https://share.streamlit.io and sign in with GitHub.
+3. Click "New app", choose this repository, branch `main`, and set the app file to `streamlit_app.py`.
+4. Streamlit will install dependencies from `requirements.txt` and deploy. You will get a public URL to share.
+
+Notes
+- Do not commit API keys or secrets. Use Streamlit Secrets or environment variables for keys (e.g., `OPENAI_API_KEY`).
+- `requirements.txt` lists `streamlit` and `openai` which are needed for this app.
+
+If you'd like, I can complete the GitHub push and guide you through the Streamlit deployment UI next.
